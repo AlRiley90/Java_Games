@@ -13,6 +13,7 @@ public class GameOfWar {
 //        System.out.println(cardInPlay);
         Card playerCard = cardsArr[Card.drawCard()];
 
+        Card computerCard = cardsArr[Card.drawCard()];
         System.out.println("playerCard true value = " + playerCard.trueValue);
         System.out.println("playerCard value = " + playerCard.value);
         System.out.println("playerCard suit = " + playerCard.suit);

@@ -17,20 +17,18 @@ public class Card {
         return this.value +" of "+ this.suit;
     }
 
-    public int cardTrueValue(){
-
-        return this.trueValue;
-    }
 
     public static int drawCard(){
        int randomCard = (int) Math.floor(Math.random() * CardsArray.getAllCards().length+1);
         return randomCard;
     }
 
-//    public static int assignCard(String card){
-//        Card[] cardsArr =  CardsArray.getAllCards();
-//        int playersCard = card.cardTrueValue();
-//        return playersCard;
-//    }
+    public void assignCard(Card playerCard, Card computerCard){
+        if(playerCard.trueValue > computerCard.trueValue){
+            System.out.println("You won this round!");
+        }else if(computerCard.trueValue > playerCard.trueValue){
+            System.out.println("You lost this round, better luck in the next one!");
+        }
+    }
 
 }
